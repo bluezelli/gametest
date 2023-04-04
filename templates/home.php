@@ -4,6 +4,7 @@
 <?php include_once ('defaults/header.php'); ?>
 <main>
     <?php include_once ('defaults/nav.php'); ?>
+    <?php include_once('defaults/homeMain.php'); ?>
 </main>
 
 <?php include_once ('defaults/footer.php'); ?>
