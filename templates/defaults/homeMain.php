@@ -2,8 +2,11 @@
     <div class="row mt-5">
         <?php
 
-        global $categories ?>
+        global $categories;
+        var_dump($categories);
+        ?>
         <?php
+
         foreach ($categories as $category){
             echo "<div class='col-4'>
                     <div class='card d-inline-flex mx-5 my-3 overflow-hidden' style='height: 20vh; width: 30vh'>
