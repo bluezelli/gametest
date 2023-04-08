@@ -24,4 +24,38 @@ function checkLogin():string
         return "FAILURE";
     }  return "INCOMPLETE";
 }
+       function isAdmin():bool
+       {
+           if(isset($_SESSION['user'])&&!empty($_SESSION['user']))
+           {
+               $user=$_SESSION['user'];
+               if ($user->role === "Admin")
+               {
+                   return true;
+               }
+               else
+               {
+                   return false;
+               }
+           }
+           return false;
+
+       }
+       function isMember():bool
+       {
+
+           if(isset($_SESSION['user'])&&!empty($_SESSION['user']))
+           {
+               $user=$_SESSION['user'];
+               if ($user->role === "Member")
+               {
+                   return true;
+               }
+               else
+               {
+                   return false;
+               }
+           }
+           return false;
        
+       }
