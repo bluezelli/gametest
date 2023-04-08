@@ -11,23 +11,23 @@
                             Categories
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                            <?php
-                            try {
-                                global $pdo;
-                                $query = $pdo->prepare("SELECT * FROM genre");
-                                $query->execute();
-                                $result = $query->fetchAll(PDO::FETCH_CLASS);
-                                foreach ($result as &$data) {
-                                    echo "<li><a href='$data->id'><button class='dropdown-item' type='button'>" . $data->name . "</button></a></li>";
-                                }
-                            } catch (PDOException $e) {
-                                die("Error!: " . $e->getMessage());
-                            }
+<!--                            --><?php
+//                            try {
+//                                global $pdo;
+//                                $query = $pdo->prepare("SELECT * FROM genre");
+//                                $query->execute();
+//                                $result = $query->fetchAll(PDO::FETCH_CLASS);
+//                                foreach ($result as &$data) {
+//                                    echo "<li><a href='$data->id'><button class='dropdown-item' type='button'>" . $data->name . "</button></a></li>";
+//                                }
+//                            } catch (PDOException $e) {
+//                                die("Error!: " . $e->getMessage());
+//                            }
                         ?>
                         </ul>
                     </div>
                 <li class="nav-item d-flex align-items-center">
-                    <a class="nav-link text-primary active" aria-current="page" href="login">Inloggen</a>
+                    <a class="nav-link text-dark active" aria-current="page" href="login">Inloggen</a>
                 </li>
                 <li class="nav-item d-flex align-items-center">
                     <a class="nav-link text-dark active" aria-current="page" href="registreren">Registreren</a>
