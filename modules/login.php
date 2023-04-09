@@ -57,5 +57,5 @@ function checkLogin():string
                }
            }
            return false;
-       
+
        }
